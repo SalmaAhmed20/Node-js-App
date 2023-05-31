@@ -34,6 +34,7 @@ pipeline {
         stage ('Deploy'){
             steps{
                 sh 'cd k8sfiles'
+                sh 'ls'
                 sh 'kubectl apply -f deploy.yaml'
                 sh 'kubectl apply -f svc.yaml'
             }
