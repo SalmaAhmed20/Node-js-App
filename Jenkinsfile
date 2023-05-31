@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    node {
+        label 'bastion'
+    }
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
